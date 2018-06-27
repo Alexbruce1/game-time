@@ -24,8 +24,62 @@ describe('Frog', function () {
   });
 
   it('should move down when down arrow kye is pressed', function() {
+  frog.moveUp();
   frog.moveDown();
-  assert.equal(frog.y, 600);  
+  assert.equal(frog.y, 560);  
+  });
+
+  it('should not move off the canvas', function() {
+  frog.moveDown();
+  assert.equal(frog.y, 560); 
+
+  frog.moveLeft();
+  frog.moveLeft();
+  frog.moveLeft();
+  frog.moveLeft();
+  frog.moveLeft();
+  frog.moveLeft();
+  frog.moveLeft();
+  frog.moveLeft();
+  frog.moveLeft();
+  frog.moveLeft();
+  frog.moveLeft();
+  assert.equal(frog.x, 0); 
+
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  frog.moveUp();
+  assert.equal(frog.y, 40);
+
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  frog.moveRight();
+  assert.equal(frog.x, 560);
+
   });
 
 })
