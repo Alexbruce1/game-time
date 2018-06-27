@@ -1,5 +1,26 @@
+body {
+  background-color: #5B942A;
+}
+
+img {
+    margin: 0 calc(50% - 250px);
+    width: 500px;
+}
+
 #game {
+  background-color: #fff;
   border: 1px dashed;
   margin: auto;
   display: block;
+}
+
+article {
+  font-family: 'VT323', monospace;
+  margin: 10px auto;
+  width: 600px;
+}
+
+h1 {
+  display: inline-flex;
+  justify-content: space-between;
 }
