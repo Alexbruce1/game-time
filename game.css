@@ -3,12 +3,13 @@ body {
 }
 
 img {
-    margin: 0 calc(50% - 250px);
-    width: 500px;
+    margin: 0 calc(50% - 150px);
+    width: 300px;
 }
 
 #game {
-  background-color: #fff;
+  background-image: url(images/graph.png);
+  background-size: 100%;
   border: 1px dashed;
   margin: auto;
   display: block;
