@@ -49,12 +49,4 @@ describe('GamePiece', function () {
 
   // })
 
-  it('should move', function() {
-    const gamePiece1 = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
-
-    gamePiece1.move();
-
-    assert.equal(gamePiece1.x, 50.5)
-  })
-
 })
