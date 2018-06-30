@@ -12,7 +12,7 @@ describe('GamePiece', function () {
       width: 10,
       color: 'rgb(250, 0, 0)',
       dx: 1,
-      dxv: .5
+      dxv: 0
     };
 
     assert.deepEqual(gamePiece, expectedObj);
