@@ -8,8 +8,7 @@ describe('Log', function () {
     log = new Log(625, 250, 80, 30, '#d2691e', -1, 1);
   });
 
-  it('should generate new logs', function() {
-    var logs = log.generateLogs();
-    assert.equal(logs.length, 4);
+  it('should start back at the right side when it reaches the left side', function() {
+    assert.equal(log.checkLogBounds(), true);
   });
 });
