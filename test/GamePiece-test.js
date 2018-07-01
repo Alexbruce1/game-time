@@ -18,6 +18,23 @@ describe('GamePiece', function () {
     assert.deepEqual(gamePiece, expectedObj);
   });
 
+  it('should start back at the right side when it reaches the left side', function () {
+    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', -1);
+    assert.equal(gamePiece.x, 50);
+    gamePiece.checkBounds();
+    assert.equal(gamePiece.x, 50);
+    gamePiece.x = -81;
+    gamePiece.checkBounds(gamePiece.x, 600);
+  });
+
+  it('should start back at the left side when it reaches the right side', function () {
+    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
+    assert.equal(gamePiece.x, 50);
+    gamePiece.checkBounds();
+    assert.equal(gamePiece.x, 50);
+    gamePiece.x = 601;
+    gamePiece.checkBounds(gamePiece.x, 520);
+  });
 
   // it('should draw to the canvas', function() {
   //   const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);

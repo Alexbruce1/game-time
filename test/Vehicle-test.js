@@ -26,11 +26,4 @@ describe('Vehicle', function() {
     assert.isFalse(isColliding);
   });
 
-  it('should start back at the left side when it reaches the right side', function () {
-    assert.equal(vehicle.x, 100);
-    vehicle.checkVehicleBounds();
-    assert.equal(vehicle.x, 100);
-    vehicle.x = 601;
-    vehicle.checkVehicleBounds(vehicle.x, 520);
-  });
 })
