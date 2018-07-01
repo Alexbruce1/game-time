@@ -49,4 +49,12 @@ describe('Frog', function () {
     assert.equal(frog.x, 560);
   });
 
+  it('should be able to hop on a log', function() {
+
+  })
+
+  it('should be able to lose 3 lives', function () {
+    
+  })
+
 });
