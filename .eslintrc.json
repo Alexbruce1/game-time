@@ -12,30 +12,38 @@
   "rules": {
     "brace-style": "error",
     "comma-spacing": [
-      "warn", {
+      "warn",
+      {
         "before": false,
         "after": true
       }
     ],
     "curly": "error",
     "semi-spacing": [
-      "error", {
+      "error",
+      {
         "before": false,
         "after": true
       }
+    ],
+    "semi": [
+      "error",
+      "always"
     ],
     "indent": [
       "error",
       2
     ],
     "key-spacing": [
-      "error", {
+      "error",
+      {
         "beforeColon": false,
         "afterColon": true
       }
     ],
     "keyword-spacing": [
-      "error", {
+      "error",
+      {
         "before": true,
         "after": true
       }
@@ -49,7 +57,8 @@
       80
     ],
     "new-cap": [
-      "error", {
+      "error",
+      {
         "newIsCap": true
       }
     ],
@@ -62,14 +71,16 @@
       "always"
     ],
     "space-before-blocks": [
-      "error", {
+      "error",
+      {
         "functions": "always",
         "keywords": "always",
         "classes": "always"
       }
     ],
     "space-infix-ops": [
-      "error", {
+      "error",
+      {
         "int32Hint": false
       }
     ]
