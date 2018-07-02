@@ -2,17 +2,8 @@ body {
   background-color: #5B942A;
 }
 
-img {
-    margin: 0 calc(50% - 150px);
-    width: 300px;
-}
-
 #game {
-  background-image: url(images/frog.jpg);
-  background-size: cover;
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  /* background-color: #F7FBF6; */
+  background-color: #000; 
   border: 1px dashed;
   margin: auto;
   display: block;
@@ -27,5 +18,5 @@ article {
 }
 
 h1 {
-  
+  margin: 0;
 }
