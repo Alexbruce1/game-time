@@ -8,11 +8,11 @@ img {
 }
 
 #game {
-  background-image: url(images/frog.jpg);
+/*  background-image: url(images/frog.jpg);
   background-size: cover;
   background-position: bottom left;
-  background-repeat: no-repeat;
-  /* background-color: #F7FBF6; */
+  background-repeat: no-repeat;*/
+  background-color: #000; 
   border: 1px dashed;
   margin: auto;
   display: block;
