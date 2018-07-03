@@ -5,7 +5,7 @@ describe('Frog', function () {
   var frog;
 
   beforeEach('initialize frog', function() {
-    frog = new Frog(280, 560, 40, 40, 'rgb(0, 200, 0)');
+    frog = new Frog();
   });
 
   it('should move left when left arrow key is pressed', function() {
