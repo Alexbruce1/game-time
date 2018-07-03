@@ -8,6 +8,19 @@ describe('Frog', function () {
     frog = new Frog();
   });
 
+  it('should have properties', function () {
+    const frog = new Frog(null, 50, 50, 10, 10, 1);
+    const expectedObj = {
+      image: null,
+      x: 50,
+      y: 50,
+      height: 10,
+      width: 10,
+      dx: 1,
+      dxv: 0
+    }
+  });
+
   it('should move left when left arrow key is pressed', function() {
     frog.moveLeft();
     assert.equal(frog.x, 240);
