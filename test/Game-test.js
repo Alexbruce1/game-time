@@ -5,13 +5,10 @@ const Vehicle = require('../lib/Vehicle.js');
 
 describe('Game', function () {
   var game;
-  // var frog;
-  // var vehicle;
 
   beforeEach('initialize game', function() {
     game = new Game();
-    // frog = new Frog();
-    // vehicle = new Vehicle(null, -100, 321, 80, 38, 1, 1);
+    frog = new Frog();
   })
 
   it('should have properties', function () {
@@ -25,31 +22,42 @@ describe('Game', function () {
   });
 
   it('should generate logs', function () {
-    
+    assert.isArray(game.generateLogs(null));
   });
 
-  it('should generate vechicles', function () {
-
+  it('should generate vehicles', function () {
+    assert.isArray(game.generateVehicles(null));
   });
 
   it('should generate a frog', function () {
-
+    assert.isObject(game.generateFrog(null));
   });
 
-  it('should have a timer that ends game after 40 seconds', function() {
+  it('should have a timer that counts down from 40 seconds', function() {
+    assert.equal(game.timeRemaining, 40);
+    assert.equal(game.currentFrame, 0);
+
+    for (let i = 0; i < 60; i++) {
+      game.countDown();
+    }
+
+    assert.equal(game.timeRemaining, 39);
 
   });
 
   // it('should be over if the frog\'s lives equal 0', function () {
-
+  //   assert.isTrue(game.isGameOver);
+  //   assert.isFalse(game.isGameOver);
   // });
 
   // it('should be over if the frog collides with a vehicle', function () {
-
+  //   assert.isTrue(game.isGameOver);
+  //   assert.isFalse(game.isGameOver);
   // });
 
   // it('should be over if the frog doesn't land on a log, function () {
-
+  //   assert.isTrue(game.isGameOver);
+  //   assert.isFalse(game.isGameOver);
   // });
 
 });
