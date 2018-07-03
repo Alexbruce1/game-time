@@ -1,15 +1,44 @@
 body {
-  background-color: #5B942A;
+  /* background-color: #5B942A; */
+  background-color: black;
+  color: #f2f2f2;
+  font-family: 'VT323', monospace;
+}
+
+header {
+  background-color: #00023D;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.main {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 #game {
   background-color: #000; 
-  border: 1px dashed;
+  border: 1px dashed #00023D;
   margin: auto;
   display: block;
 }
 
-article {
+.game-area {
+  width: 45%;
+}
+
+.game-details {
+  height: 30px;
   font-family: 'VT323', monospace;
   display: inline-flex;
   justify-content: space-between;
@@ -17,12 +46,41 @@ article {
   width: 600px;
 }
 
-h1 {
-  margin: 0;
+.info-section {
+  /* background-color: #00023D; */
+  border: 1px dashed #00023D;
+  height: 600px;
+  margin: 50px 50px 0 0;
+  width: 50%;
+}
+
+.info {
+  margin: 5px;
+  width: 100%;
+}
+
+.info-header {
+  color: #5B942A;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.info-p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  margin: 50px;
+}
+
+.song-title {
+  color: #5B942A;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  /* margin-top: 75px; */
+  margin-top: calc(100vh - 780px);
+  text-align: center;
 }
 
 audio {
-  margin: 250px calc(50% - 125px);
+  margin: 0 calc(50% - 125px);
   width: 250px;
-  display: none;
 }
