@@ -8,8 +8,8 @@ describe('Vehicle', function() {
   var frog;
 
   beforeEach('initialize vehicle', function () {
-    frog = new Frog(280, 560, 40, 40, 'rgb(0, 200, 0)');
-    vehicle = new Vehicle(100, 321, 80, 38, '#999', 1, 1);
+    frog = new Frog();
+    vehicle = new Vehicle(null, 100, 321, 80, 38, 1, 1);
   });
 
   it('should be able to collide with the frog', function () {

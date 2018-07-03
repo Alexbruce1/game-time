@@ -10,14 +10,15 @@ describe('Game', function () {
 
   beforeEach('initialize game', function() {
     game = new Game();
-    frog = new Frog(280, 560, 40, 40, 'rgb(0, 200, 0)');
-    vehicle = new Vehicle(-100, 321, 80, 38, '#999', 1, 1);
+    frog = new Frog();
+    vehicle = new Vehicle(null, -100, 321, 80, 38, 1, 1);
   })
 
   it('should have a game over property that starts at false and changes to true when 3 lives are used', function () {
     assert.equal(game.isGameOver, false);
-    game.lives = -1;
-    game.resetGame(frog)
+    frog.loseALife(game);
+    frog.loseALife(game);
+    frog.loseALife(game);
     assert.equal(game.isGameOver, true)
   })
 

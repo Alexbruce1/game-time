@@ -4,13 +4,13 @@ const GamePiece = require('../lib/GamePiece.js');
 describe('GamePiece', function () {
 
   it('should have properties', function () {
-    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
+    const gamePiece = new GamePiece(null, 50, 50, 10, 10, 1);
     const expectedObj = {
+      image: null,
       x: 50,
       y: 50,
       height: 10,
       width: 10,
-      color: 'rgb(250, 0, 0)',
       dx: 1,
       dxv: 0
     };
@@ -19,7 +19,7 @@ describe('GamePiece', function () {
   });
 
   it('should start back at the right side when it reaches the left side', function () {
-    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', -1);
+    const gamePiece = new GamePiece(null, 50, 50, 10, 10, 1);
     assert.equal(gamePiece.x, 50);
     gamePiece.checkBounds();
     assert.equal(gamePiece.x, 50);
@@ -28,7 +28,7 @@ describe('GamePiece', function () {
   });
 
   it('should start back at the left side when it reaches the right side', function () {
-    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
+    const gamePiece = new GamePiece(null, 50, 50, 10, 10, 1);
     assert.equal(gamePiece.x, 50);
     gamePiece.checkBounds();
     assert.equal(gamePiece.x, 50);
