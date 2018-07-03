@@ -8,7 +8,6 @@ describe('Game', function () {
 
   beforeEach('initialize game', function() {
     game = new Game();
-    frog = new Frog();
   })
 
   it('should have properties', function () {
