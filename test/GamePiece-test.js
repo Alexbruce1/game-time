@@ -2,9 +2,13 @@ const { assert } = require('chai');
 const GamePiece = require('../lib/GamePiece.js');
 
 describe('GamePiece', function () {
+  var gamePiece;
+
+  beforeEach('initialize frog', function() {
+    gamePiece = new GamePiece(null, 50, 50, 10, 10, 1, .5);
+  });
 
   it('should have properties', function () {
-    const gamePiece = new GamePiece(null, 50, 50, 10, 10, 1);
     const expectedObj = {
       image: null,
       x: 50,
@@ -12,37 +16,48 @@ describe('GamePiece', function () {
       height: 10,
       width: 10,
       dx: 1,
-      dxv: 0
+      dxv: .5
     };
 
     assert.deepEqual(gamePiece, expectedObj);
   });
 
+  it('should move across the screen', function () {
+    gamePiece.move();
+
+    assert.equal(gamePiece.x, 50.5);
+
+    gamePiece.move();
+    gamePiece.move();
+    gamePiece.move();
+
+    assert.equal(gamePiece.x, 52);
+  });
+
   it('should start back at the right side when it reaches the left side', function () {
-    const gamePiece = new GamePiece(null, 50, 50, 10, 10, 1);
+    gamePiece.dx = -1;
     assert.equal(gamePiece.x, 50);
+
     gamePiece.checkBounds();
+    
     assert.equal(gamePiece.x, 50);
-    gamePiece.x = -81;
-    gamePiece.checkBounds(gamePiece.x, 600);
+
+    gamePiece.x = -11;
+    gamePiece.checkBounds();
+
+    assert.equal(gamePiece.x, 600);
   });
 
   it('should start back at the left side when it reaches the right side', function () {
-    const gamePiece = new GamePiece(null, 50, 50, 10, 10, 1);
     assert.equal(gamePiece.x, 50);
+
     gamePiece.checkBounds();
+
     assert.equal(gamePiece.x, 50);
-    gamePiece.x = 601;
-    gamePiece.checkBounds(gamePiece.x, 520);
+
+    gamePiece.x = 611;
+    gamePiece.checkBounds();
+
+    assert.equal(gamePiece.x, -10);
   });
-
-  // it('should draw to the canvas', function() {
-  //   const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
-
-  //   gamePiece.draw('2d');
-
-  //   assert.equal(gamePiece, );
-
-  // })
-
 })
