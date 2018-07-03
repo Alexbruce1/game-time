@@ -9,15 +9,17 @@ describe('Log', function () {
   });
 
   it('should have properties', function () {
-    const log = new Log(null, 50, 50, 10, 10, 1);
     const expectedObj = {
       image: null,
-      x: 50,
-      y: 50,
-      height: 10,
-      width: 10,
-      dx: 1,
-      dxv: 0
-    }
+      x: 625,
+      y: 250,
+      width: 80,
+      height: 30,
+      dx: -1,
+      dxv: 1
+    };
+
+    assert.deepEqual(log, expectedObj);
   });
+
 });

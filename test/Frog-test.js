@@ -1,5 +1,6 @@
 const { assert } = require('chai');
 const Frog = require('../lib/Frog.js');
+const Log = require('../lib/Log.js');
 
 describe('Frog', function () {
   var frog;
@@ -9,16 +10,20 @@ describe('Frog', function () {
   });
 
   it('should have properties', function () {
-    const frog = new Frog(null, 50, 50, 10, 10, 1);
     const expectedObj = {
-      image: null,
-      x: 50,
-      y: 50,
-      height: 10,
-      width: 10,
-      dx: 1,
+      image: undefined,
+      x: 280,
+      y: 560,
+      height: 40,
+      width: 40,
+      onLog: false,
+      score: 0,
+      lives: 3,
+      dx: 0,
       dxv: 0
-    }
+    };
+
+    assert.deepEqual(frog, expectedObj);
   });
 
   it('should move left when left arrow key is pressed', function() {
@@ -63,11 +68,36 @@ describe('Frog', function () {
   });
 
   it('should be able to hop on a log', function() {
+    const log1 = new Log(null, 600, 41, 160, 38, -1, 1.5);
+    const log2 = new Log(null, 320, 81, 160, 38, -1, .5);
+    const logs = [log1, log2];
+    assert.equal(frog.onLog, false);
 
-  })
+    frog.x = 600;
+    frog.y = 40;
+    frog.hopOnLog(logs);
 
-  it('should be able to lose 3 lives', function () {
-    
-  })
+    assert.equal(frog.onLog, true);
+
+  });
+
+  it('should be able to lose a life and start back at the beginning', function () {
+    assert.equal(frog.lives, 3);
+
+    frog.loseALife();
+
+    assert.equal(frog.lives, 2);
+    assert.equal(frog.x, 280);
+    assert.equal(frog.y, 560);
+  });
+
+  it('should generate a score based on how far it makes it up the screen', function () {
+    assert.equal(frog.score, 0);
+
+    frog.moveUp()
+    frog.generateScore();
+
+    assert.equal(frog.score, 10);
+  });
 
 });
