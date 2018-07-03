@@ -7,18 +7,37 @@
   <link href='./game.css' rel='stylesheet' type='text/css'/>
 </head>
 <body>
-  <article>
-    <h1 id="score">Score: </h1>
-    <h1 id="lives">Lives: </h1>
-    <h1 id="timer">Time: </h1>
-  </article>
-  <canvas id="game" width="600" height="600">
-    <img src="images/frog.png" id="frog-image">
-    <img src="images/car-right.png" id="right-car-image">
-    <img src="images/car-left.png" id="left-car-image">
-    <img src="images/log.png" id="log-image">
-  </canvas>
-  <audio controls autoplay loop>
+  <header></header>
+  <section class="main">
+    <section class="game-area">
+      <article class="game-details">
+        <h1 id="score"></h1>
+        <h1 id="lives"></h1>
+        <h1 id="timer"></h1>
+      </article>
+      <canvas id="game" width="600" height="600">
+        <img src="images/frog.png" id="frog-image">
+        <img src="images/car-right.png" id="right-car-image">
+        <img src="images/car-left.png" id="left-car-image">
+        <img src="images/log.png" id="log-image">
+      </canvas>
+    </section>
+    <section class="info-section">
+      <article class="info">
+        <h1 class="info-header">How To Play   FROGGER</h1>
+        <p class="info-p">Help froggy across the road avoiding the racing cars, trucks and hazards. Use the arrow keys to move and cross the river by jumping on logs and turtles. Watch out for those turtles though, they have a habit of disappearing just when you don't
+        want them to!</p>
+      </article>
+      <article class="info">
+        <h1 class="info-header">About  FROGGER</h1>
+        <p class="info-p">Frogger is regarded as a classic game from the golden age of video games and is noted for its novel gameplay and theme. Frogger
+        is still popular and versions can be found on many websites. Happy Hopper is a faithful homage to the original and retains
+        much of the original gameplay. Enjoy!</p>
+      </article>
+    </section>
+  </section>
+  <p class="song-title">Frogger (PSX Gamerip) - Bang Bang Barrel</p>
+  <audio id="audio" controls autoplay loop>
     <source src="audio/soundtrack.mp3" type="audio/MP3">
   </audio>
   <script src="main.bundle.js"></script>
