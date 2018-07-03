@@ -5,49 +5,51 @@ const Vehicle = require('../lib/Vehicle.js');
 
 describe('Game', function () {
   var game;
-  var frog;
-  var vehicle;
+  // var frog;
+  // var vehicle;
 
   beforeEach('initialize game', function() {
     game = new Game();
-    frog = new Frog();
-    vehicle = new Vehicle(null, -100, 321, 80, 38, 1, 1);
+    // frog = new Frog();
+    // vehicle = new Vehicle(null, -100, 321, 80, 38, 1, 1);
   })
 
-  it('should have a game over property that starts at false and changes to true when 3 lives are used', function () {
-    assert.equal(game.isGameOver, false);
-    frog.loseALife(game);
-    frog.loseALife(game);
-    frog.loseALife(game);
-    assert.equal(game.isGameOver, true)
-  })
+  it('should have properties', function () {
+    const expectedObj = {
+      isGameOver: false,
+      currentFrame: 0,
+      timeRemaining: 40
+    };
 
-  it('should have a property of lives that decreases after a collision or lands on water', function () {
-    assert.equal(game.lives, 3);
-    frog.loseALife(game);
-    assert.equal(game.lives, 2);
-    frog.loseALife(game);
-    assert.equal(game.lives, 1);
+    assert.deepEqual(game, expectedObj);
+  });
 
-  })
+  it('should generate logs', function () {
+    
+  });
 
-  it('should reset frog\'s location after a life is lost', function () {
+  it('should generate vechicles', function () {
 
-  })
-
-  it('should increase score every time the frog moves up', function () {
-
-  })
-
-  it('should generate logs', function() {
-
-  })
-
-  it('should generate vehicles', function() {
-
-  })
+  });
 
   it('should generate a frog', function () {
 
-  })
+  });
+
+  it('should have a timer that ends game after 40 seconds', function() {
+
+  });
+
+  // it('should be over if the frog\'s lives equal 0', function () {
+
+  // });
+
+  // it('should be over if the frog collides with a vehicle', function () {
+
+  // });
+
+  // it('should be over if the frog doesn't land on a log, function () {
+
+  // });
+
 });
