@@ -13,8 +13,8 @@ describe('GamePiece', function () {
       image: null,
       x: 50,
       y: 50,
-      height: 10,
       width: 10,
+      height: 10,
       dx: 1,
       dxv: .5
     };
