@@ -1,17 +1,20 @@
 const { assert } = require('chai');
 const Frog = require('../lib/Frog.js');
 const Log = require('../lib/Log.js');
+const Image = require('../lib/Image.js');
 
 describe('Frog', function () {
   var frog;
 
   beforeEach('initialize frog', function() {
-    frog = new Frog();
+    const img = new Image();
+    img.src = '../images/Frog.png';
+    frog = new Frog(img);
   });
 
   it('should have properties', function () {
     const expectedObj = {
-      image: undefined,
+      image:  { "src": "../images/Frog.png" },
       x: 280,
       y: 560,
       height: 40,
