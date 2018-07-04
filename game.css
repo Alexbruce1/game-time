@@ -53,7 +53,7 @@ h1 {
   border: 1px dashed #00023D;
   height: 600px;
   margin: 50px 0 0 0;
-  width: 50%;
+  width: 40%;
 }
 
 .info {
@@ -78,7 +78,6 @@ h1 {
   color: #5B942A;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  /* margin-top: 75px; */
   margin-top: 50px;
   text-align: center;
 }
@@ -88,8 +87,9 @@ audio {
   width: 250px;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1000px) {
   .main {
     display: block;
+    text-align: center;
   }
 }
