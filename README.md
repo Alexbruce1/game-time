@@ -1,6 +1,6 @@
 # Game Time - Frogger
 
-Basic Game Time starter kit.
+Recreation of Frogger, a 1980's arcade game, using HTML Canvas and JavaScript. 
 
 ## Goals
 
