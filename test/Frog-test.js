@@ -44,7 +44,7 @@ describe('Frog', function () {
     assert.equal(frog.x, 320); 
   });
 
-  it('should move down when down arrow kye is pressed', function() {
+  it('should move down when down arrow key is pressed', function() {
     frog.moveUp();
     frog.moveDown();
     assert.equal(frog.y, 560);  
